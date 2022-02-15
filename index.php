@@ -75,7 +75,7 @@ $json_data = json_decode($json_file,true);
 
 ?>
 
-<!-- Peter Romera-Messina --!>
+<!-- Peter Romera-Messina 
 <h1>
 <?php echo $json_data['Peter']; ?>
     <span class="text-primary"><?php echo $json_data['Romera-Messina']; ?></span>
