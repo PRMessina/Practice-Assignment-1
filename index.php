@@ -46,7 +46,7 @@
         </div>
       </div>
       <hr>
-      <div id="skils" class="content-item">
+      <div id="skills" class="content-item">
         <div class="vertical-center">
           <h4>Skills</h4>
           <p>...</p>
