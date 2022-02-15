@@ -75,10 +75,10 @@ $json_data = json_decode($json_file,true);
 
 ?>
 
-<!-- Peter Romera-Messina 
+<!-- Name --!>
 <h1>
-<?php echo $json_data['Peter']; ?>
-    <span class="text-primary"><?php echo $json_data['Romera-Messina']; ?></span>
+    <?php echo $json_data['first-name']; ?>
+    <span class="text-primary"><?php echo $json_data['last-name']; ?></span>
 </h1>
 
 <?php foreach($json_data['experience'] AS $experience) { ?>
@@ -86,6 +86,45 @@ $json_data = json_decode($json_file,true);
     <div class="flex-grow-1">
       <h3 class="mb-0"><?php echo $experience['title']; ?></h3>
       <div class="subheading mb-3"><?php echo $experience['employer']; ?></div>
+      <p><?php echo $experience['description']; ?></p>
+    </div>
+    <div class="flex-shrink-0">
+      <span class="text-primary"><?php echo $experience['period']; ?></span>
+    </div>
+  </div>
+<?php  } ?>
+
+<?php foreach($json_data['education'] AS $education) { ?>
+  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+    <div class="flex-grow-1">
+      <h3 class="mb-0"><?php echo $education['college']; ?></h3>
+      <div class="subheading mb-3"><?php echo $education['Major']; ?></div>
+      <p><?php echo $education['description']; ?></p>
+    </div>
+    <div class="flex-shrink-0">
+      <span class="text-primary"><?php echo $education['GPA']; ?></span>
+    </div>
+  </div>
+<?php  } ?>
+
+<?php foreach($json_data['skills'] AS $skills) { ?>
+  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+    <div class="flex-grow-1">
+      <h3 class="mb-0"><?php echo $skills['impact']; ?></h3>
+      <div class="subheading mb-3"><?php echo $skills['amount']; ?></div>
+      <p><?php echo $skills['description']; ?></p>
+    </div>
+    <div class="flex-shrink-0">
+      <span class="text-primary"><?php echo $skills['time']; ?></span>
+    </div>
+  </div>
+<?php  } ?>
+
+<?php foreach($json_data['interests'] AS $experience) { ?>
+  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+    <div class="flex-grow-1">
+      <h3 class="mb-0"><?php echo $experience['amount']; ?></h3>
+      <div class="subheading mb-3"><?php echo $experience['tittle']; ?></div>
       <p><?php echo $experience['description']; ?></p>
     </div>
     <div class="flex-shrink-0">
